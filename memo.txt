@@ -1,0 +1,6 @@
+実際のプログラム
+FILE *recipedataFile;
+char recipedata[256];
+
+理由:
+変数名をよくある*fp等ではなく，どのファイルのための変数なのかを明記
