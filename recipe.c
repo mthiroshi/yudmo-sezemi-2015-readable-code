@@ -26,9 +26,15 @@ void spec5(char *recipeFileName, int argRecipeId){
     int recipe_id = 0;
     int i;
 
+    if (argRecipeId >= numofRecipedata) {
+        printf("ERROR :ArgRecipeID");
+        exit(EXIT_FAILURE);
+    }
+
+
     if((recipedataFile = fopen(recipeFileName, "r")) == NULL){
         printf("file open error\n");
-        exit(0);
+        exit(EXIT_FAILURE);
     }
 
     // fgets()できなくなるまでループ
