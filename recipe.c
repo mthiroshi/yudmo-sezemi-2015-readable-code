@@ -8,14 +8,14 @@ int main(int argc, char* argv[]){
     int argRecipeId;
 
 
-    if (argc != 3) { /* 引数エラーチェック */
+    if (argc != 2) { /* 引数エラーチェック */
         printf("Usage Error: recipe.exe [File Name] [Recipe ID]");
         exit(EXIT_FAILURE);
     }
 
     argRecipeId = atoi(argv[2]);
     
-    spec5(argv[1], argRecipeId); /*  */
+    spec5(argv[1], argRecipeId);
 }
 
 void spec5(char *recipeFileName, int argRecipeId){
@@ -41,12 +41,9 @@ void spec5(char *recipeFileName, int argRecipeId){
     for (i = 0;i < numofRecipedata && 
             fgets(recipedataName, 256, recipedataFile); i++){
 
-        // char型配列に文字列を代入
         strcpy(recipedata[recipe_id], recipedataName);
 
-        if (argRecipeId == recipe_id) {
-            printf("ID:%d recipe_name :%s", recipe_id, recipedata[recipe_id]);
-        }
+        printf("ID:%d recipe_name :%s", recipe_id, recipedata[recipe_id]);
         recipe_id++;
     }
 
