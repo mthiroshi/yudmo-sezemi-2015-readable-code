@@ -4,3 +4,12 @@ char recipedata[256];
 
 理由:
 変数名をよくある*fp等ではなく，どのファイルのための変数なのかを明記
+
+実際のプログラム
+仕様5の実装時に
+char recipedataName[256];
+int numofRecipedata = 3;
+char recipedata[numofRecipedata][256];
+int recipe_id = 0;
+
+理由:直感的にわかるようにするため
