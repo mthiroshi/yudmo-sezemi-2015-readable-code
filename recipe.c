@@ -1,12 +1,12 @@
 #include<stdio.h>
 
-void spec3();
+void spec4();
 
 int main(void){
-  spec3();
+  spec4();
 }
 
-void spec3(){
+void spec4(){
   FILE *recipedataFile;
   char recipedata[256];
 
